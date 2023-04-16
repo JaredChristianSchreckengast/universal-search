@@ -98,7 +98,7 @@ class UniversalSearch:
             # Generates all possible tuples of length k made up from characters of the
             # brainfuck alphabet. Returns a generator, so the next program is always
             # generated only once it is needed.
-            all_k_character_programs = itertools.combinations_with_replacement(
+            all_k_character_programs = itertools.product(
                 alphabet, k
             )
             for program in all_k_character_programs:
